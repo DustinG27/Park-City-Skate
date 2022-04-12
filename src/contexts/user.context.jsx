@@ -3,8 +3,8 @@ import { createUserDocumentFromAuth, onAuthStateChangedListener, signOutUser } f
 
 // actual value used for access
 export const UserContext = createContext({
-    currentUser: null,
     setCurrentUser: () => null,
+    currentUser: null,
 })
 
 // the functional component returning every context

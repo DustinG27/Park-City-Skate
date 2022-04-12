@@ -3,12 +3,7 @@ import Navigation from './routes/navigation/navigation'
 import Authentication from './routes/authentication/authentication';
 import './components/category-item/catergory-item';
 import { Routes, Route } from 'react-router-dom';
-
-
-
-const Shop = () => {
-  return <h1>Shop Page</h1>
-}
+import Shop from './shop/shop.component';
 
 
 
