@@ -3,7 +3,7 @@ import Navigation from './routes/navigation/navigation'
 import Authentication from './routes/authentication/authentication';
 import './components/category-item/catergory-item';
 import { Routes, Route } from 'react-router-dom';
-import Shop from './shop/shop.component';
+import Shop from './routes/shop/shop.component';
 
 
 

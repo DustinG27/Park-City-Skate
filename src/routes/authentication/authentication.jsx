@@ -10,8 +10,6 @@ const Authentication = () => {
  
     return (
         <div className='authentication-container'>
-            <h1>Sign in Page</h1>
-            
            <SignInForm />
            <SignUpForm />
         </div>
