@@ -1,14 +1,18 @@
 import { Fragment, useContext } from 'react';
+import CartIcon from '../../components/cart-icon/cart-icon.component';
+import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component';
 import { UserContext } from '../../contexts/user.context';
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom'; 
 import { signOutUser } from '../../utilities/firebase/firebase';
 import './navigation.scss';
 import { ReactComponent as CrwnLogo } from '../../assets/crown.svg';
+import { CartContext } from '../../contexts/cart.context';
 
 const Navigation = () => {
 
 
-  const { currentUser, setCurrentUser } = useContext(UserContext);
+  const { currentUser, setCurrentUser } = useContext(UserContext);  
+  const { isCartOpen } = useContext(CartContext);
   // console.log(currentUser);
 
   const signOutHandler = async () => {
@@ -17,7 +21,7 @@ const Navigation = () => {
   }
     return (
        
-      <Fragment>  {/* using fragment because wrapping div is not needed */}
+      <Fragment>  
         <div className="navigation">
         <Link className="logo-container" to="/">
           <CrwnLogo className='logo' />
@@ -35,7 +39,9 @@ const Navigation = () => {
                 <Link className="nav-link" to='/auth'> {/* linking routes together through nav bar*/}
                 sign in
               </Link>)}
+              <CartIcon />
           </div>
+          { isCartOpen && <CartDropdown /> }
         </div>
         <Outlet />
       </Fragment>
