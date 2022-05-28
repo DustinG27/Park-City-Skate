@@ -12,13 +12,13 @@ import './index.scss';
 render(
   <React.StrictMode>
     <BrowserRouter>
-    <UserProvider>
-    <ProductsProvider>
-    <CartProvider>
-    <App />
-    </CartProvider>
-    </ProductsProvider>
-    </UserProvider>
+      <UserProvider>
+        <ProductsProvider>
+          <CartProvider>
+            <App />
+          </CartProvider>
+        </ProductsProvider>
+      </UserProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
